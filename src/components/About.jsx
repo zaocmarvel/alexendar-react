@@ -94,14 +94,14 @@ export default function About({ onOpenBooking, onViewPortfolio }) {
               className="relative bg-white/90 backdrop-blur-sm p-6 rounded-3xl shadow-xl border border-slate-100 flex flex-col gap-6"
             >
               <img 
-                alt="Speaking Event" 
+                alt="AI Development Workspace" 
                 className="w-full h-48 rounded-2xl object-cover shadow-sm" 
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuD68AWi9K3dpC5Ne5BrjKyA0nmWOi5bnrUBj_GyHM8U1dFb_JkbuQw7N-MNBNmFJe39xnhNkHj44RWA7tmjXoTfiz3tqD6fBBrXrU6UhizC3zW9L-5W1U_bQVNpDeiDWvEdTfpQa6bYiWsVO3SEayqXXvrkTXAnvRuexRzngpzI1CNZNWxIO-dY52t8qm_tIAQACVKBmXRvMpYczydm-RXVFLrXTVMRjC1unRV3nHYGwkbB5Ry6XKmqAjGpMn31fu1QSdZmkxserlqW"
               />
               <div>
                 <p className="text-slate-600 leading-relaxed text-sm">
                   <span className="w-8 h-px bg-primary inline-block align-middle mr-2"></span>
-                  <span className="font-bold text-dark">And the cofounder and executive director</span> of the <span className="font-semibold">flow research collective</span>, he is one of the world leading expert on human performance.
+                  <span className="font-bold text-dark">As the co-founder and lead engineer</span> of an AI startup, he specializes in fine-tuning <span className="font-semibold">Small Language Models (SLMs)</span> to deliver high-performance, domain-specific intelligence for businesses.
                 </p>
               </div>
             </motion.div>
