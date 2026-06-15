@@ -62,13 +62,13 @@ export default function Hero() {
         >
           <div className="flex items-center space-x-2 text-sm font-semibold text-slate-600 mb-4 uppercase tracking-widest">
             <span className="w-8 h-px bg-slate-400"></span>
-            <span>Author</span>
-            <span className="text-primary">• Speaker</span>
+            <span>AI/ML</span>
+            <span className="text-primary">• Engineer</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-dark leading-tight mb-4">
-            flow <span className="text-primary italic">researcher</span>
+            machine <span className="text-primary italic">learning</span>
           </h2>
-          <p className="text-slate-500 font-medium tracking-wide">gravity lover</p>
+          <p className="text-slate-500 font-medium tracking-wide">intelligence developer</p>
         </motion.div>
 
         {/* Center column (Portrait) */}
