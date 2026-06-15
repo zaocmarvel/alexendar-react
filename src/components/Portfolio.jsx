@@ -3,19 +3,22 @@ import { motion } from 'framer-motion';
 export default function Portfolio({ onBack }) {
   const projects = [
     {
-      title: "Vision-Language Grounding Model",
-      description: "Fine-tuned a multimodal model for precise spatial grounding in zero-shot settings, improving target bounding box accuracy by 14%.",
-      tags: ["PyTorch", "LLaVA", "Transformers", "Computer Vision"]
+      title: "LLM Fine-Tuning Dashboard",
+      description: "Designed a fine-tuning platform for training and validating small language models, reducing business compute costs by 60%.",
+      tags: ["PyTorch", "LLaVA", "Transformers", "NLP"],
+      cover: "/llama_finetune.jpg"
     },
     {
-      title: "Real-Time Object Detection Pipeline",
-      description: "Optimized a YOLO-based pipeline with TensorRT and INT8 quantization for edge device deployment, achieving 45 FPS at low latency.",
-      tags: ["C++", "CUDA", "TensorRT", "YOLOv8"]
+      title: "Vision-Language Detection",
+      description: "Built a spatial multimodal model that performs visual grounding and real-time bounding box detection across custom classes.",
+      tags: ["C++", "CUDA", "TensorRT", "Computer Vision"],
+      cover: "/vision_grounding.jpg"
     },
     {
-      title: "Automated RL Agent for Robotics Control",
-      description: "Designed a deep reinforcement learning framework using PPO to train robotic arms for high-precision picking tasks under simulated environments.",
-      tags: ["Python", "OpenAI Gym", "PyBullet", "PPO"]
+      title: "Robotics PPO Controller",
+      description: "Developed a deep reinforcement learning policy utilizing PPO for precise trajectory path planning of robotic systems.",
+      tags: ["Python", "OpenAI Gym", "PyBullet", "RL"],
+      cover: "/ppo_robotics.jpg"
     }
   ];
 
@@ -81,9 +84,14 @@ export default function Portfolio({ onBack }) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * idx + 0.3 }}
               whileHover={{ y: -6, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.1)" }}
-              className="bg-white p-8 rounded-[2rem] shadow-lg border border-slate-100 flex flex-col justify-between"
+              className="bg-white p-6 rounded-[2rem] shadow-lg border border-slate-100 flex flex-col justify-between overflow-hidden"
             >
               <div>
+                <img 
+                  alt={project.title} 
+                  className="w-full h-48 object-cover rounded-2xl mb-6 shadow-sm border border-slate-50"
+                  src={project.cover}
+                />
                 <h3 className="text-xl font-bold text-dark mb-3">{project.title}</h3>
                 <p className="text-sm text-slate-500 leading-relaxed mb-6">{project.description}</p>
               </div>

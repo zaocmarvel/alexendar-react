@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
-export default function Books() {
+export default function Books({ onViewPortfolio }) {
   const sliderRef = useRef(null);
   const [activeBookId, setActiveBookId] = useState(2); // Featured project (id: 2)
 
@@ -132,7 +132,10 @@ export default function Books() {
           whileTap={{ scale: 0.95 }}
           className="inline-flex items-center justify-center bg-primary text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-blue-800 transition-colors shadow-md active:scale-95" 
           href="#"
-          onClick={(e) => e.preventDefault()}
+          onClick={(e) => {
+            e.preventDefault();
+            if (onViewPortfolio) onViewPortfolio();
+          }}
         >
           VIEW ALL PROJECTS
           <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

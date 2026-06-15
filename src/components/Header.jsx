@@ -18,12 +18,17 @@ export default function Header({ onOpenBooking, onViewHome, onViewPortfolio }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = ['HOME', 'SPEAKING', 'WRITING', 'ABOUT ME'];
+  const navItems = ['HOME', 'PORTFOLIO', 'SPEAKING', 'WRITING', 'ABOUT ME'];
 
   const handleNavClick = (e, item) => {
     e.preventDefault();
     setActiveTab(item);
     setMobileMenuOpen(false);
+    
+    if (item === 'PORTFOLIO') {
+      if (onViewPortfolio) onViewPortfolio();
+      return;
+    }
     
     if (onViewHome) onViewHome();
     

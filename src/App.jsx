@@ -47,7 +47,7 @@ function App() {
             <Partners />
 
             {/* Best Selling Books */}
-            <Books />
+            <Books onViewPortfolio={() => setView('portfolio')} />
 
             {/* Disruptive Wisdom speaking promo */}
             <Wisdom onOpenBooking={handleOpenBooking} />
