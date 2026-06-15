@@ -83,6 +83,7 @@ export default function Wisdom({ onOpenBooking }) {
                 alt="LLM Fine-Tuning" 
                 className="w-24 h-24 rounded-2xl object-cover shadow-sm shrink-0" 
                 src="/llama_finetune.jpg"
+                loading="lazy"
               />
               <div>
                 <p className="text-sm text-slate-600 mb-4 leading-relaxed">
@@ -121,6 +122,7 @@ export default function Wisdom({ onOpenBooking }) {
               alt="Deep Learning Neural Network Architecture" 
               className="w-full max-w-md h-auto rounded-3xl object-cover shadow-2xl drop-shadow-xl border-4 border-white cursor-pointer" 
               src="/deep_learning_nodes.jpg"
+              loading="lazy"
             />
           </motion.div>
         </motion.div>

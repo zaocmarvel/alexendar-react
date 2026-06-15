@@ -126,6 +126,7 @@ export default function Books({ onViewPortfolio }) {
                 alt={`${book.title} Project Screenshot`} 
                 className="w-full aspect-[16/10] rounded-xl mb-6 object-cover shadow-md"
                 src={book.cover}
+                loading="lazy"
               />
               <h3 className={`font-bold text-dark mb-2 transition-all ${
                 isFeatured ? 'text-2xl' : 'text-xl'

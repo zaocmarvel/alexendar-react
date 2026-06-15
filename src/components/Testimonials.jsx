@@ -110,6 +110,7 @@ export default function Testimonials() {
                         isActive ? 'grayscale-0 scale-100' : 'grayscale opacity-60 scale-95'
                       }`}
                       src={t.avatar}
+                      loading="lazy"
                     />
                     <div>
                       <h4 className={`font-bold text-xs transition-colors ${

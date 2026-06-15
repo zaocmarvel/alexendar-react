@@ -121,6 +121,7 @@ export default function Portfolio({ onBack }) {
                   alt={project.title} 
                   className="w-full aspect-[16/10] object-cover rounded-2xl mb-6 shadow-sm border border-slate-50"
                   src={project.cover}
+                  loading="lazy"
                 />
                 <h3 className="text-xl font-bold text-dark mb-3">{project.title}</h3>
                 <p className="text-sm text-slate-500 leading-relaxed mb-6">{project.description}</p>

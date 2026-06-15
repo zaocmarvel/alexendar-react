@@ -98,6 +98,7 @@ export default function Training({ onOpenBooking }) {
               alt="AI Server Telemetry" 
               className="w-full h-[400px] object-cover rounded-3xl shadow-xl transition-transform duration-300" 
               src="/ai_server_telemetry.jpg"
+              loading="lazy"
             />
             
             {/* Overlay Card */}
@@ -114,6 +115,7 @@ export default function Training({ onOpenBooking }) {
                   alt="Praxis AI logo" 
                   className="w-12 h-12 rounded-full object-cover shadow-sm" 
                   src="/llama_finetune.jpg"
+                  loading="lazy"
                 />
                 <p className="text-xs font-bold text-dark leading-tight">
                   Scale your business with optimized Small Language Models.
