@@ -7,14 +7,17 @@ import Partners from './components/Partners';
 import Books from './components/Books';
 import Wisdom from './components/Wisdom';
 import Training from './components/Training';
+import CertificatesTeaser from './components/CertificatesTeaser';
 import Videos from './components/Videos';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import BookingModal from './components/BookingModal';
 import Portfolio from './components/Portfolio';
+import Certificates from './components/Certificates';
+import Contact from './components/Contact';
 
 function App() {
-  const [view, setView] = useState('home'); // 'home' or 'portfolio'
+  const [view, setView] = useState('home'); // 'home', 'portfolio', 'certificates', or 'contact'
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   const handleOpenBooking = () => setIsBookingOpen(true);
@@ -27,11 +30,17 @@ function App() {
         onOpenBooking={handleOpenBooking} 
         onViewHome={() => setView('home')} 
         onViewPortfolio={() => setView('portfolio')} 
+        onViewCertificates={() => setView('certificates')}
+        onViewContact={() => setView('contact')}
       />
 
       <AnimatePresence mode="wait">
         {view === 'portfolio' ? (
           <Portfolio key="portfolio" onBack={() => setView('home')} />
+        ) : view === 'certificates' ? (
+          <Certificates key="certificates" onBack={() => setView('home')} />
+        ) : view === 'contact' ? (
+          <Contact key="contact" onBack={() => setView('home')} />
         ) : (
           <div key="home">
             {/* Hero Section */}
@@ -57,6 +66,9 @@ function App() {
               <Training onOpenBooking={handleOpenBooking} />
             </div>
 
+            {/* Certificates Teaser Section */}
+            <CertificatesTeaser onViewCertificates={() => setView('certificates')} />
+
             {/* Recent Videos player */}
             <div id="videos">
               <Videos />
@@ -66,7 +78,11 @@ function App() {
             <Testimonials />
 
             {/* Footer & CTA block */}
-            <Footer onOpenBooking={handleOpenBooking} />
+            <Footer 
+              onOpenBooking={handleOpenBooking} 
+              onViewCertificates={() => setView('certificates')}
+              onViewContact={() => setView('contact')}
+            />
           </div>
         )}
       </AnimatePresence>

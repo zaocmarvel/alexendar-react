@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function Footer({ onOpenBooking }) {
+export default function Footer({ onOpenBooking, onViewCertificates, onViewContact }) {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
 
@@ -138,12 +138,14 @@ export default function Footer({ onOpenBooking }) {
         </div>
 
         <div className="flex flex-wrap justify-between items-center border-t border-blue-200/50 pt-8 gap-4">
-          <div className="flex flex-wrap gap-x-8 gap-y-2 text-xs font-semibold text-slate-600 uppercase tracking-wider">
-            <a className="hover:text-primary transition-colors" href="#" onClick={(e) => scrollToSection(e, 'home')}>ABOUT ME</a>
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs font-semibold text-slate-600 uppercase tracking-wider">
+            <a className="hover:text-primary transition-colors" href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>ABOUT ME</a>
             <a className="hover:text-primary transition-colors" href="#" onClick={(e) => scrollToSection(e, 'books')}>PROJECTS</a>
             <a className="hover:text-primary transition-colors" href="#" onClick={(e) => scrollToSection(e, 'speaking')}>DEEP LEARNING</a>
             <a className="hover:text-primary transition-colors" href="#" onClick={(e) => scrollToSection(e, 'videos')}>VIDEOS</a>
             <a className="hover:text-primary transition-colors" href="#" onClick={(e) => scrollToSection(e, 'training')}>CONSULTING</a>
+            <a className="hover:text-primary transition-colors" href="#" onClick={(e) => { e.preventDefault(); if (onViewCertificates) onViewCertificates(); }}>CERTIFICATES</a>
+            <a className="hover:text-primary transition-colors" href="#" onClick={(e) => { e.preventDefault(); if (onViewContact) onViewContact(); }}>CONTACT</a>
           </div>
         </div>
 

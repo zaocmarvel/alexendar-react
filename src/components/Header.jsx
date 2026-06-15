@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-export default function Header({ onOpenBooking, onViewHome, onViewPortfolio }) {
+export default function Header({ onOpenBooking, onViewHome, onViewPortfolio, onViewCertificates, onViewContact }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('HOME');
@@ -18,7 +18,7 @@ export default function Header({ onOpenBooking, onViewHome, onViewPortfolio }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = ['HOME', 'PORTFOLIO', 'DEEP LEARNING', 'PROJECTS', 'ABOUT ME'];
+  const navItems = ['HOME', 'PORTFOLIO', 'DEEP LEARNING', 'PROJECTS', 'CERTIFICATES', 'CONTACT', 'ABOUT ME'];
 
   const handleNavClick = (e, item) => {
     e.preventDefault();
@@ -27,6 +27,14 @@ export default function Header({ onOpenBooking, onViewHome, onViewPortfolio }) {
     
     if (item === 'PORTFOLIO') {
       if (onViewPortfolio) onViewPortfolio();
+      return;
+    }
+    if (item === 'CERTIFICATES') {
+      if (onViewCertificates) onViewCertificates();
+      return;
+    }
+    if (item === 'CONTACT') {
+      if (onViewContact) onViewContact();
       return;
     }
     

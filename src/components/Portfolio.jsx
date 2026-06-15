@@ -31,6 +31,24 @@ export default function Portfolio({ onBack }) {
       description: "Optimized model throughput and latency for production-grade Small Language Models (SLMs) on custom enterprise datasets.",
       tags: ["CUDA", "TensorRT", "SLMs", "Praxis AI"],
       cover: "/ai_server_telemetry.jpg"
+    },
+    {
+      title: "Real-Time Object Tracking",
+      description: "Implemented a high-throughput video pipeline for object detection and multi-object tracking using YOLOv8 and DeepSORT, optimized for edge devices.",
+      tags: ["PyTorch", "YOLOv8", "DeepSORT", "Computer Vision"],
+      cover: "/vision_grounding.jpg"
+    },
+    {
+      title: "Neural Architecture Search Optimizer",
+      description: "Built an automated framework in JAX that performs neural architecture search to find latency-optimal models for low-compute mobile devices.",
+      tags: ["JAX", "AutoML", "Neural Networks", "Optimization"],
+      cover: "/deep_learning_nodes.jpg"
+    },
+    {
+      title: "Autonomous Path Planning Simulation",
+      description: "Designed an A* and Dijkstra pathfinding system in ROS2 for autonomous ground vehicles traversing challenging terrain maps.",
+      tags: ["C++", "ROS2", "Path Planning", "Robotics"],
+      cover: "/ppo_robotics.jpg"
     }
   ];
 
