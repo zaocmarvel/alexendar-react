@@ -7,7 +7,7 @@ export default function Videos() {
 
   const videos = [
     {
-      title: "How to open the door to peak performance | Steven Kotler",
+      title: "How to open the door to peak performance | Olabode Zacchaeus",
       youtubeId: "dM_Jivm49gA",
       thumbnail: "https://lh3.googleusercontent.com/aida-public/AB6AXuA2sVtrsSHt0IPE67C3OJJ5QVEtUPudDGldNVoIWcA9bLvrhu28PE6--MAKh4ZYAexIHZf-dGpuabWXON6aJgNH86ahrAjkCFVDil3R8ZR0x6Ev9uWjlrxSNd5FqCCExSeAg-CROMTwVvw8929ZJZ9vUD9fSGTwD_GglScLIbLJikHV-WEQnby3w8aJ8OpLY9iUGKQAb_TnsdXETEteQqbdAT0q6sAU3I_W0baWYOESn4OFvyiBIgxhpxWOusK7TjQ1WDCIsYE5hqtC",
     },
@@ -17,7 +17,7 @@ export default function Videos() {
       thumbnail: "https://lh3.googleusercontent.com/aida-public/AB6AXuCMO-CXziyzO5XOc1DmitQ021FnzNBaYeszOqysHcKfG4FkOspzT3bvYEUI0NT37NFVK9dHB1It7cDpia8QaOopG0O2mDuAbuYDOuCmwm8YmSOGy9q-3gsCE2nyYoPFa-g9JigzPAJf8iJgMVWA2fSL9-tpsePVwEHcp6y_SrTOPuTQR575gIHsFR0ouL6sbXqmr3vgpEgzFFMj4zgpJfmqub-WryaQ5WN0Uqm7czIRu4cFfyumn6J8sZNJzF9H0vQsbK4WFTNkTm_1",
     },
     {
-      title: "Steven Kotler: The Art of Impossible",
+      title: "Olabode Zacchaeus: The Art of Impossible",
       youtubeId: "N8mP7R2-8U8",
       thumbnail: "https://lh3.googleusercontent.com/aida-public/AB6AXuAd_urd9ITB3C7yaRQOWBbD8jUKR55M6T8MZ2VWZc_Mg-3KSS6L5kEQ_eKlFMKxZARdZQgLPjkzxqc9w1yomO7hkHKQRHxYSlgFg1XIGti_R05Jt05XPSNi-G6QRlpUADKADSiW3_Ht6ZI3b7FOJ4bvx3QgS3XbzeF_vqT5w2aYTxuAMb6ENcDEOhTnrmuOLyO_gDBOzTdTkOdgmVx_IOSZu-4Q9H8ADM5b1vmbDw_8fBzoHshcccnEfxHUO773ywroj6tXBc2pMACG",
     },
@@ -27,7 +27,7 @@ export default function Videos() {
       thumbnail: "https://lh3.googleusercontent.com/aida-public/AB6AXuCekJh3iLdt9zqSj4hI0OUHVx8eM_9iit8EUbZdgZ4AfuIplpf8acJvF8k3PJZQjeg9v2l22EWfr87W_dzbLj5iPBqMEsRsHgdQxUJhCgIvwqUG8I_DL-qW0LqEK7iuFUa1AkDn4JioxstWAYT7LCsV3ZEEKJ0DOAAI9ms8wfh6Ph5Bw4ymvGsi3a9xVd-5FvvzGZFMygKelzEhB-1-13j7fI3ISvT7su-r18i81oAUWN_DZeYG_61o8WQRPKXg7Y_jIdXuu9wuoIHe",
     },
     {
-      title: "Steven Kotler: How to Get into the Flow State",
+      title: "Olabode Zacchaeus: How to Get into the Flow State",
       youtubeId: "7x3W1z4u3x8",
       thumbnail: "https://lh3.googleusercontent.com/aida-public/AB6AXuDus7WdIAVpKj0NQeu_nib-fJkf0_f70aj-mKHQPSWA_Xffp3SaurNBEg8GD6-fLv7Jegx8BaD5P92XFgGtHlL14C5VaN_g5y1XZA5Mv92Vu2i0Vl8d9Txfx-1N8hIn-xDzAbCGn7vQi5J6wJaHV6DzADYp7yFVfNPw8EcjWKy2RIwmiFfS5O-hVr1nAGZZHUEZ4PMACzHDj-KkizuziqEBOOK0i8UnBuB3aBaXUOVifB35Rcgk2iLe0lCneDvnRSgCFSG5fPmEQ6kB",
     }

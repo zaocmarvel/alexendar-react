@@ -61,13 +61,13 @@ export default function About({ onOpenBooking, onScrollToBooks }) {
               <span className="text-sm font-bold text-slate-500 tracking-widest uppercase">About Me</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-dark leading-tight mb-6">
-              Steven Kotler is a New York Times bestselling author <span className="text-slate-400 font-light">and award winning journalist</span>
+              Olabode Zacchaeus is a New York Times bestselling author <span className="text-slate-400 font-light">and award winning journalist</span>
             </h2>
             <button 
               onClick={onScrollToBooks}
               className="inline-flex items-center bg-primary text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-blue-800 transition-colors shadow-md mt-4 active:scale-95"
             >
-              BUY STEVEN LATEST BOOKS 
+              BUY ZACCHAEUS LATEST BOOKS 
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
               </svg>

@@ -7,7 +7,7 @@ export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      quote: "It's difficult to think of a writer more invigorating and tuned-in than Kotler. Tomorrowland is like taking a shot of caffeine.",
+      quote: "It's difficult to think of a writer more invigorating and tuned-in than Zacchaeus. Tomorrowland is like taking a shot of caffeine.",
       author: "Saharvardi Khis",
       role: "founder of SpaceX",
       avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuA05wkmnUu6CUlPwDCIofkm486jITMv_OUCJ1R_JmTVn72u31b4xOS09YhKD_-q1ceS_FnLWwIKsSEzTkUuADicnYTZfIctEJt0BFU-Genyrsd_55NL2s7q1pj4GWoavtIIvNkwM4b_8X0km7vW7JB1fMRKII_DpKFIs3KQ28KDKav4q9CTgKO_sJXycjRdhgjgDdW2AnIPHiJI6iBEOhRzvkU1oVYZR0CYomxRwi0yUK8O95DYQiwHZO3myPZ7A4ZVeFZ1aZAxjH71",
@@ -45,7 +45,7 @@ export default function Testimonials() {
               WHAT<br/>OTHERS SAY
             </h2>
             <p className="text-sm text-slate-500 mb-8 leading-relaxed">
-              Steven's research centers on the neurobiology of peak performance — essentially what happens in the brain and body when humans are performing at their absolute best.
+              Zacchaeus's research centers on the neurobiology of peak performance — essentially what happens in the brain and body when humans are performing at their absolute best.
             </p>
             <div className="flex space-x-2">
               <button 

@@ -72,7 +72,7 @@ export default function Training({ onOpenBooking }) {
             <div className="flex items-start gap-4 mb-8">
               <div className="w-16 h-px bg-slate-300 mt-2 shrink-0"></div>
               <p className="text-slate-500 leading-relaxed text-sm">
-                Steven's research centers on the neurobiology of peak performance — essentially what happens in the brain and body when humans are performing at their very best — with particular attention paid to the state of consciousness known as flow.
+                Zacchaeus's research centers on the neurobiology of peak performance — essentially what happens in the brain and body when humans are performing at their very best — with particular attention paid to the state of consciousness known as flow.
               </p>
             </div>
             <motion.button 
@@ -116,7 +116,7 @@ export default function Training({ onOpenBooking }) {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcyTNWpAXoB5LO4mE1osDZ6Mv21aFRShhjUrgx97XGzZMUaZoykSfQTfhF_nyphDxBKFb8mwCoketl04XDuZ2fbvQKiieGGxAYYx8fe61JIR4oOEwJVZ9X3dAIb_D4MOJgHOjAOfDx70ggnECnBe85DR9GGRRMjcWRQL_6l3R7e8RvuvDUjndKzd6aaspjmRFkYmxGJ9Y-S3q0a3eL_7pMxqAl73X6Deg2dNH1QG-itza0d5VJ2BHy7yJzpAUorpCuXvk4Wh4kEC1x"
                 />
                 <p className="text-xs font-bold text-dark leading-tight">
-                  Steven's research centers on the neurobiology of peak performance
+                  Zacchaeus's research centers on the neurobiology of peak performance
                 </p>
               </div>
               <div className="flex items-center text-xs font-medium text-slate-500 border-t border-slate-100 pt-2">

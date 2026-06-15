@@ -36,7 +36,7 @@ export default function Footer({ onOpenBooking }) {
           
           <div className="md:w-1/3 z-10">
             <img 
-              alt="Steven Kotler Close Up" 
+              alt="Olabode Zacchaeus Close Up" 
               className="w-full h-auto rounded-3xl object-cover shadow-lg border-4 border-white transform scale-110 -translate-y-8 hover:scale-[1.12] transition-transform duration-300" 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIDt9DsW1Evz7puLS9GpDzOl0pnY76KHb9rKS_X5OSbZXV2_KgyrXzPISKELsGpybpijeJFh6-u-Co0D4otIM4qLOvm1udL9ohsIzjOrLiPrIc9IRfcBpojKo62yBp9F1pGSCYWAHijoYqEQEpV5m9X3s3q860p5FDthYxNdgV7HlWbQDPN4uxzOf25NR14p36zivN3czyDbjq06tLU5GAhhkqh27FGwHQdBhq2geqs58MoDMZPauOEmFIeRch1uWjuXPRlZCJlSoK"
             />
@@ -47,13 +47,13 @@ export default function Footer({ onOpenBooking }) {
               INSPIRE YOUR<br/>AUDIENCE
             </h2>
             <p className="text-sm text-slate-500 mb-8 max-w-md mx-auto md:mx-0">
-              Bring the edge of <span className="font-bold text-dark">human performance to your event. Steven Kotler's talks</span> offer ground breaking perspectives and practical tools for excellence.
+              Bring the edge of <span className="font-bold text-dark">human performance to your event. Zacchaeus's talks</span> offer ground breaking perspectives and practical tools for excellence.
             </p>
             <button 
               onClick={onOpenBooking}
               className="inline-flex items-center justify-center bg-primary text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-blue-800 transition-all shadow-md active:scale-95 animate-bounce-subtle"
             >
-              BOOK STEVEN TO SPEAK 
+              BOOK ZACCHAEUS TO SPEAK 
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
               </svg>
@@ -65,7 +65,7 @@ export default function Footer({ onOpenBooking }) {
       {/* Background Text */}
       <div className="absolute bottom-1/4 w-full flex justify-center z-0 opacity-30 select-none pointer-events-none">
         <h1 className="text-[15vw] font-extrabold text-blue-100 text-outline leading-none whitespace-nowrap tracking-tighter mix-blend-overlay">
-          OLABODE ZACCHAEUS
+          ZACCHAEUS
         </h1>
       </div>
 

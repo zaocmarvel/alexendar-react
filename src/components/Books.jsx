@@ -10,14 +10,14 @@ export default function Books() {
       id: 1,
       title: "Gem country",
       rating: "4.8 Rating",
-      description: "Steven Kotler is a New York Times bestselling author and award winning journalist.",
+      description: "Olabode Zacchaeus is a New York Times bestselling author and award winning journalist.",
       cover: "https://lh3.googleusercontent.com/aida-public/AB6AXuD0x3in0W5SWt3Go1ACp5oHcqwy77ZK8RId1Y-sDu0rbitmXIFvWrtLFkhSXHVjcW8GydaQbQgdEyem9lthhwFERFgPtfrSL17ZYU_2c7tSPJqqV6s6EzQLKdA4TetCnQqvGJLex5q2Sfh8hJKWEUKNaZQJQ9Qwx7Z-CpezcsvvJ5_YOSDqLF93wwIf-1gqk_ygS-fMm50ik5PYqK0VgVfxqyTWujIXBI_YQYRIUrdrU7o6VuovT6iHrUBz8GAMa2h34Me7wek0cgU7",
     },
     {
       id: 2,
       title: "The devil's dictionary",
       rating: "4.8 Rating",
-      description: "Steven Kotler is a New York Times bestselling author and award winning journalist.",
+      description: "Olabode Zacchaeus is a New York Times bestselling author and award winning journalist.",
       cover: "https://lh3.googleusercontent.com/aida-public/AB6AXuBOVev2tK2ztcFrxOXni3qDlmTUCXCrOSmIHUrXX4yRVzChNmrotEKIhtz67OkGZq8ZuWwREVKWI5UA6ijWQTAh7hvYLGBzTy7g1eoHoyKMY7QA9bYdhQ1hBpGL03jAAlvwGXqIeBXYRGlonlItPzXLaRFJhJ5bbQDVs3vMhLuTbsg1gGmk4Y1tbMYk2i9l_bP6pP_9DcbpGDPhoAbrKBbwu6YG013zo6lUHMAjPD7i6Wt59_l3ig86yyiyLN2dkAk4nj2Qf5bUkkzO",
       featured: true
     },
@@ -25,7 +25,7 @@ export default function Books() {
       id: 3,
       title: "The art of impossible",
       rating: "4.8 Rating",
-      description: "Steven Kotler is a New York Times bestselling author and award winning journalist.",
+      description: "Olabode Zacchaeus is a New York Times bestselling author and award winning journalist.",
       cover: "https://lh3.googleusercontent.com/aida-public/AB6AXuBdI69rHVZex0FKVdLHaOIrJn1kksznLBaLhuXWtGJ5nUDGBbguFRjvSlOdOuRAghoUo14fCLbQzwCmvNvnfrsKwwl4CiFD7V5I4IJ_-N_9n9S-V4aWesdclSrSy73xfN1MKdRd7QfUCCgIftVj690cyqSKydYoNJmzvhCvMLGzuiSAd2LPWRcQjPNcxCPXDxmPN1fEQXX9IsEUDp3mIT9f2cggWnaEF5Ob8M4pdbgtjUp1ftB_y-MSnaM2XgYj0IseavIQdHeQ7150",
     }
   ];

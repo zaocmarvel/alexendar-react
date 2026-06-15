@@ -93,7 +93,7 @@ export default function BookingModal({ onClose }) {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Steven Kotler"
+                  placeholder="Olabode Zacchaeus"
                   className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
                 />
               </div>

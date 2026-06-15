@@ -51,7 +51,7 @@ export default function Header({ onOpenBooking }) {
       >
         {/* Logo */}
         <div className="text-2xl font-bold text-dark tracking-tighter cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          Olabode Zacchaeus
+          Zacchaeus
         </div>
 
         {/* Desktop Menu */}

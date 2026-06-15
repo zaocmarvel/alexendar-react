@@ -45,7 +45,7 @@ export default function Hero() {
         className="absolute inset-0 flex items-center justify-center opacity-25 select-none pointer-events-none mix-blend-overlay"
       >
         <h1 className="text-[15vw] font-extrabold text-white leading-none whitespace-nowrap tracking-tighter">
-          OLABODE ZACCHAEUS
+          ZACCHAEUS
         </h1>
       </motion.div>
 
@@ -104,7 +104,7 @@ export default function Hero() {
         className="absolute bottom-0 w-full flex justify-center z-30"
       >
         <h1 className="text-6xl md:text-[8rem] font-black text-white text-outline tracking-tighter mix-blend-overlay select-none">
-          OLABODE ZACCHAEUS
+          ZACCHAEUS
         </h1>
       </motion.div>
     </section>
