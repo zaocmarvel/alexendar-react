@@ -11,56 +11,65 @@ import Videos from './components/Videos';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import BookingModal from './components/BookingModal';
+import Portfolio from './components/Portfolio';
 
 function App() {
+  const [view, setView] = useState('home'); // 'home' or 'portfolio'
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   const handleOpenBooking = () => setIsBookingOpen(true);
   const handleCloseBooking = () => setIsBookingOpen(false);
 
-  const handleScrollToBooks = (e) => {
-    if (e) e.preventDefault();
-    const element = document.getElementById('books');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
   return (
     <div className="font-sans antialiased overflow-x-hidden bg-slate-50 min-h-screen">
       {/* Navigation Header */}
-      <Header onOpenBooking={handleOpenBooking} />
+      <Header 
+        onOpenBooking={handleOpenBooking} 
+        onViewHome={() => setView('home')} 
+        onViewPortfolio={() => setView('portfolio')} 
+      />
 
-      {/* Hero Section */}
-      <Hero />
+      <AnimatePresence mode="wait">
+        {view === 'portfolio' ? (
+          <Portfolio key="portfolio" onBack={() => setView('home')} />
+        ) : (
+          <div key="home">
+            {/* Hero Section */}
+            <Hero />
 
-      {/* About Section */}
-      <About onOpenBooking={handleOpenBooking} onScrollToBooks={handleScrollToBooks} />
+            {/* About Section */}
+            <About 
+              onOpenBooking={handleOpenBooking} 
+              onViewPortfolio={() => setView('portfolio')} 
+            />
 
-      {/* Trusted Partners */}
-      <Partners />
+            {/* Trusted Partners */}
+            <Partners />
 
-      {/* Best Selling Books */}
-      <Books />
+            {/* Best Selling Books */}
+            <Books />
 
-      {/* Disruptive Wisdom speaking promo */}
-      <Wisdom onOpenBooking={handleOpenBooking} />
+            {/* Disruptive Wisdom speaking promo */}
+            <Wisdom onOpenBooking={handleOpenBooking} />
 
-      {/* Flow Training section */}
-      <div id="training">
-        <Training onOpenBooking={handleOpenBooking} />
-      </div>
+            {/* Flow Training section */}
+            <div id="training">
+              <Training onOpenBooking={handleOpenBooking} />
+            </div>
 
-      {/* Recent Videos player */}
-      <div id="videos">
-        <Videos />
-      </div>
+            {/* Recent Videos player */}
+            <div id="videos">
+              <Videos />
+            </div>
 
-      {/* Testimonials */}
-      <Testimonials />
+            {/* Testimonials */}
+            <Testimonials />
 
-      {/* Footer & CTA block */}
-      <Footer onOpenBooking={handleOpenBooking} />
+            {/* Footer & CTA block */}
+            <Footer onOpenBooking={handleOpenBooking} />
+          </div>
+        )}
+      </AnimatePresence>
 
       {/* Contact/Booking Modal Popup */}
       <AnimatePresence>

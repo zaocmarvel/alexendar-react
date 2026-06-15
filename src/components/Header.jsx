@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-export default function Header({ onOpenBooking }) {
+export default function Header({ onOpenBooking, onViewHome, onViewPortfolio }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('HOME');
@@ -25,18 +25,23 @@ export default function Header({ onOpenBooking }) {
     setActiveTab(item);
     setMobileMenuOpen(false);
     
+    if (onViewHome) onViewHome();
+    
     // Smooth scroll mapping
     let targetId = '';
-    if (item === 'HOME') window.scrollTo({ top: 0, behavior: 'smooth' });
-    else if (item === 'ABOUT ME') targetId = 'about';
+    if (item === 'HOME') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (item === 'ABOUT ME') targetId = 'about';
     else if (item === 'WRITING') targetId = 'books';
     else if (item === 'SPEAKING') targetId = 'speaking';
     
     if (targetId) {
-      const element = document.getElementById(targetId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      setTimeout(() => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 50);
     }
   };
 
@@ -50,7 +55,10 @@ export default function Header({ onOpenBooking }) {
         }`}
       >
         {/* Logo */}
-        <div className="text-2xl font-bold text-dark tracking-tighter cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+        <div className="text-2xl font-bold text-dark tracking-tighter cursor-pointer" onClick={() => {
+          if (onViewHome) onViewHome();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}>
           Zacchaeus
         </div>
 

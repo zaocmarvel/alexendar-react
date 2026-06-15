@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-export default function About({ onOpenBooking, onScrollToBooks }) {
+export default function About({ onOpenBooking, onViewPortfolio }) {
   const containerVariants = {
     hidden: {},
     visible: {
@@ -64,10 +64,10 @@ export default function About({ onOpenBooking, onScrollToBooks }) {
               Olabode Zacchaeus is a Machine Learning Engineer <span className="text-slate-400 font-light">and AI researcher</span>
             </h2>
             <button 
-              onClick={onScrollToBooks}
+              onClick={onViewPortfolio}
               className="inline-flex items-center bg-primary text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-blue-800 transition-colors shadow-md mt-4 active:scale-95"
             >
-              BUY ZACCHAEUS LATEST BOOKS 
+              VIEW PORTFOLIO 
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
               </svg>
