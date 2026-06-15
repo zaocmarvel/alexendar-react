@@ -45,7 +45,7 @@ export default function Hero() {
         className="absolute inset-0 flex items-center justify-center opacity-25 select-none pointer-events-none mix-blend-overlay"
       >
         <h1 className="text-[15vw] font-extrabold text-white leading-none whitespace-nowrap tracking-tighter">
-          ALEXENDAR
+          OLABODE ZACCHAEUS
         </h1>
       </motion.div>
 
@@ -85,7 +85,7 @@ export default function Hero() {
             {/* Glow backing */}
             <div className="absolute -inset-1.5 bg-gradient-to-r from-primary to-accent rounded-2xl blur-md opacity-20 hover:opacity-45 transition duration-500"></div>
             <img 
-              alt="Alexendar Portrait" 
+              alt="Olabode Zacchaeus Portrait" 
               className="relative w-64 md:w-80 h-auto object-cover rounded-2xl shadow-2xl drop-shadow-xl" 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZi6zAPYm0JzuCvpI_jEryJrr0kti1RU8AjC6m0rc7FvV6UD14Wun_vYqXEo25CYKC4vsSHGmb0SA6chFyzy1iw42z1ujVoJdaV3qCEoo9GYFKYdfPbAaojD9jchbfbogiGT2GaHCde6PT16gE2kQc1xewOHiZUsZ67iOCY2Nl5Kk__15-O32e9_Zt32vHDzVv5Z6hwrxQ8M_j-CjhTaJiuxREWnowL_aCV45-lV6xo7HJkbKUOTrh3Y-bzdmID09q8ZundBzX-70g"
             />
@@ -104,7 +104,7 @@ export default function Hero() {
         className="absolute bottom-0 w-full flex justify-center z-30"
       >
         <h1 className="text-6xl md:text-[8rem] font-black text-white text-outline tracking-tighter mix-blend-overlay select-none">
-          ALEXENDAR
+          OLABODE ZACCHAEUS
         </h1>
       </motion.div>
     </section>

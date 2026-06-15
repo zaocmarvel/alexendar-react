@@ -65,7 +65,7 @@ export default function Footer({ onOpenBooking }) {
       {/* Background Text */}
       <div className="absolute bottom-1/4 w-full flex justify-center z-0 opacity-30 select-none pointer-events-none">
         <h1 className="text-[15vw] font-extrabold text-blue-100 text-outline leading-none whitespace-nowrap tracking-tighter mix-blend-overlay">
-          ALEXENDAR
+          OLABODE ZACCHAEUS
         </h1>
       </div>
 
@@ -148,8 +148,8 @@ export default function Footer({ onOpenBooking }) {
         </div>
 
         <div className="flex justify-between items-center mt-8 text-xs text-slate-500">
-          <p>© 2026 Alexendar, all rights reserved.</p>
-          <p>Site by Alexendar React</p>
+          <p>© 2026 Olabode Zacchaeus, all rights reserved.</p>
+          <p>Site by Olabode Zacchaeus React</p>
         </div>
       </div>
     </footer>
