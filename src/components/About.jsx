@@ -101,7 +101,7 @@ export default function About({ onOpenBooking, onViewPortfolio }) {
               <div>
                 <p className="text-slate-600 leading-relaxed text-sm">
                   <span className="w-8 h-px bg-primary inline-block align-middle mr-2"></span>
-                  <span className="font-bold text-dark">As the co-founder and lead engineer</span> of an AI startup, he specializes in fine-tuning <span className="font-semibold">Small Language Models (SLMs)</span> to deliver high-performance, domain-specific intelligence for businesses.
+                  <span className="font-bold text-dark">As the co-founder and lead engineer</span> of Praxis AI, he specializes in fine-tuning <span className="font-semibold">Small Language Models (SLMs)</span> to deliver high-performance, domain-specific intelligence for businesses.
                 </p>
               </div>
             </motion.div>

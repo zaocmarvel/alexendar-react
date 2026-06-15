@@ -3,30 +3,30 @@ import { motion } from 'framer-motion';
 
 export default function Books() {
   const sliderRef = useRef(null);
-  const [activeBookId, setActiveBookId] = useState(2); // Featured book (id: 2 - The Devil's Dictionary)
+  const [activeBookId, setActiveBookId] = useState(2); // Featured project (id: 2)
 
   const books = [
     {
       id: 1,
-      title: "Gem country",
-      rating: "4.8 Rating",
-      description: "Olabode Zacchaeus is a New York Times bestselling author and award winning journalist.",
-      cover: "https://lh3.googleusercontent.com/aida-public/AB6AXuD0x3in0W5SWt3Go1ACp5oHcqwy77ZK8RId1Y-sDu0rbitmXIFvWrtLFkhSXHVjcW8GydaQbQgdEyem9lthhwFERFgPtfrSL17ZYU_2c7tSPJqqV6s6EzQLKdA4TetCnQqvGJLex5q2Sfh8hJKWEUKNaZQJQ9Qwx7Z-CpezcsvvJ5_YOSDqLF93wwIf-1gqk_ygS-fMm50ik5PYqK0VgVfxqyTWujIXBI_YQYRIUrdrU7o6VuovT6iHrUBz8GAMa2h34Me7wek0cgU7",
+      title: "LLM Fine-Tuning Dashboard",
+      rating: "LLM / NLP",
+      description: "Designed a fine-tuning platform for training and validating small language models, reducing business compute costs by 60%.",
+      cover: "/llama_finetune.jpg",
     },
     {
       id: 2,
-      title: "The devil's dictionary",
-      rating: "4.8 Rating",
-      description: "Olabode Zacchaeus is a New York Times bestselling author and award winning journalist.",
-      cover: "https://lh3.googleusercontent.com/aida-public/AB6AXuBOVev2tK2ztcFrxOXni3qDlmTUCXCrOSmIHUrXX4yRVzChNmrotEKIhtz67OkGZq8ZuWwREVKWI5UA6ijWQTAh7hvYLGBzTy7g1eoHoyKMY7QA9bYdhQ1hBpGL03jAAlvwGXqIeBXYRGlonlItPzXLaRFJhJ5bbQDVs3vMhLuTbsg1gGmk4Y1tbMYk2i9l_bP6pP_9DcbpGDPhoAbrKBbwu6YG013zo6lUHMAjPD7i6Wt59_l3ig86yyiyLN2dkAk4nj2Qf5bUkkzO",
+      title: "Vision-Language Detection",
+      rating: "Computer Vision",
+      description: "Built a spatial multimodal model that performs visual grounding and real-time bounding box detection across custom classes.",
+      cover: "/vision_grounding.jpg",
       featured: true
     },
     {
       id: 3,
-      title: "The art of impossible",
-      rating: "4.8 Rating",
-      description: "Olabode Zacchaeus is a New York Times bestselling author and award winning journalist.",
-      cover: "https://lh3.googleusercontent.com/aida-public/AB6AXuBdI69rHVZex0FKVdLHaOIrJn1kksznLBaLhuXWtGJ5nUDGBbguFRjvSlOdOuRAghoUo14fCLbQzwCmvNvnfrsKwwl4CiFD7V5I4IJ_-N_9n9S-V4aWesdclSrSy73xfN1MKdRd7QfUCCgIftVj690cyqSKydYoNJmzvhCvMLGzuiSAd2LPWRcQjPNcxCPXDxmPN1fEQXX9IsEUDp3mIT9f2cggWnaEF5Ob8M4pdbgtjUp1ftB_y-MSnaM2XgYj0IseavIQdHeQ7150",
+      title: "Robotics PPO Controller",
+      rating: "Reinforcement Learning",
+      description: "Developed a deep reinforcement learning policy utilizing PPO for precise trajectory path planning of robotic systems.",
+      cover: "/ppo_robotics.jpg",
     }
   ];
 
@@ -40,7 +40,7 @@ export default function Books() {
       });
     }
 
-    // Cycle the active/featured book status for visual feedback
+    // Cycle the active/featured status for visual feedback
     if (direction === 'left') {
       setActiveBookId((prev) => (prev > 1 ? prev - 1 : 3));
     } else {
@@ -52,7 +52,7 @@ export default function Books() {
     <section id="books" className="py-24 bg-section-gradient overflow-hidden">
       <div className="container mx-auto px-4 md:px-12 mb-12 flex justify-between items-end">
         <h2 className="text-4xl md:text-5xl font-bold text-dark leading-none">
-          BEST SELLING<br/>BOOKS
+          FEATURED<br/>ML PROJECTS
         </h2>
         
         {/* Navigation Arrows */}
@@ -60,7 +60,7 @@ export default function Books() {
           <button 
             onClick={() => handleScroll('left')}
             className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-slate-400 hover:text-primary shadow-sm border border-slate-100 transition-all hover:bg-slate-50 active:scale-95"
-            aria-label="Previous book"
+            aria-label="Previous project"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
@@ -69,7 +69,7 @@ export default function Books() {
           <button 
             onClick={() => handleScroll('right')}
             className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white shadow-md hover:bg-blue-800 transition-all active:scale-95"
-            aria-label="Next book"
+            aria-label="Next project"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
@@ -103,14 +103,13 @@ export default function Books() {
               }`}
             >
               <div className="flex justify-between items-center mb-4">
-                <span className="inline-flex items-center px-2.5 py-0.5 text-xs font-medium text-slate-500">
-                  <span className="w-2 h-2 rounded-full bg-blue-400 mr-2"></span>
+                <span className="inline-flex items-center px-2.5 py-0.5 text-xs font-semibold text-primary bg-indigo-50/50 rounded-full">
                   {book.rating}
                 </span>
               </div>
               <motion.img 
                 layout
-                alt={`${book.title} Book Cover`} 
+                alt={`${book.title} Project Screenshot`} 
                 className={`w-full h-auto rounded-xl mb-6 object-cover aspect-[3/4] shadow-md`}
                 src={book.cover}
               />
@@ -135,7 +134,7 @@ export default function Books() {
           href="#"
           onClick={(e) => e.preventDefault()}
         >
-          VIEW ALL 
+          VIEW ALL PROJECTS
           <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
           </svg>
