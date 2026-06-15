@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -23,6 +23,37 @@ function App() {
   const handleOpenBooking = () => setIsBookingOpen(true);
   const handleCloseBooking = () => setIsBookingOpen(false);
 
+  const pageVariants = {
+    initial: { 
+      opacity: 0, 
+      scale: 0.97, 
+      y: 20,
+      filter: "blur(4px)"
+    },
+    animate: { 
+      opacity: 1, 
+      scale: 1, 
+      y: 0,
+      filter: "blur(0px)",
+      transition: { 
+        type: "spring",
+        stiffness: 180,
+        damping: 22,
+        duration: 0.5
+      }
+    },
+    exit: { 
+      opacity: 0, 
+      scale: 0.97, 
+      y: -20,
+      filter: "blur(4px)",
+      transition: { 
+        duration: 0.35,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
     <div className="font-sans antialiased overflow-x-hidden bg-slate-50 min-h-screen">
       {/* Navigation Header */}
@@ -36,13 +67,19 @@ function App() {
 
       <AnimatePresence mode="wait">
         {view === 'portfolio' ? (
-          <Portfolio key="portfolio" onBack={() => setView('home')} />
+          <motion.div key="portfolio" variants={pageVariants} initial="initial" animate="animate" exit="exit" className="w-full">
+            <Portfolio onBack={() => setView('home')} />
+          </motion.div>
         ) : view === 'certificates' ? (
-          <Certificates key="certificates" onBack={() => setView('home')} />
+          <motion.div key="certificates" variants={pageVariants} initial="initial" animate="animate" exit="exit" className="w-full">
+            <Certificates onBack={() => setView('home')} />
+          </motion.div>
         ) : view === 'contact' ? (
-          <Contact key="contact" onBack={() => setView('home')} />
+          <motion.div key="contact" variants={pageVariants} initial="initial" animate="animate" exit="exit" className="w-full">
+            <Contact onBack={() => setView('home')} />
+          </motion.div>
         ) : (
-          <div key="home">
+          <motion.div key="home" variants={pageVariants} initial="initial" animate="animate" exit="exit" className="w-full">
             {/* Hero Section */}
             <Hero />
 
@@ -83,7 +120,7 @@ function App() {
               onViewCertificates={() => setView('certificates')}
               onViewContact={() => setView('contact')}
             />
-          </div>
+          </motion.div>
         )}
       </AnimatePresence>
 

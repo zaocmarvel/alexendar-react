@@ -58,22 +58,55 @@ export default function Header({ onOpenBooking, onViewHome, onViewPortfolio, onV
     }
   };
 
+  const logoLetters = "Zacchaeus".split("");
+  const letterVariants = {
+    hover: { 
+      y: -5, 
+      color: "#1D1A8F",
+      transition: { type: "spring", stiffness: 400, damping: 8 }
+    }
+  };
+
   return (
     <>
-      <nav 
-        className={`fixed top-0 w-full z-40 px-6 md:px-12 py-4 flex justify-between items-center transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-white/80 backdrop-blur-md shadow-md' 
-            : 'bg-transparent'
-        }`}
+      <motion.nav 
+        initial={{ y: -60, x: "-50%", left: "50%" }}
+        animate={{ 
+          y: isScrolled ? 16 : 0,
+          x: "-50%",
+          left: "50%",
+          width: isScrolled ? "90%" : "100%",
+          maxWidth: isScrolled ? "1200px" : "100%",
+          borderRadius: isScrolled ? "999px" : "0px",
+          backgroundColor: isScrolled ? "rgba(255, 255, 255, 0.85)" : "rgba(255, 255, 255, 0)",
+          boxShadow: isScrolled ? "0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.05)" : "none",
+          border: isScrolled ? "1px solid rgba(226, 232, 240, 0.8)" : "1px solid rgba(226, 232, 240, 0)",
+          paddingLeft: isScrolled ? "2rem" : "3rem",
+          paddingRight: isScrolled ? "2rem" : "3rem"
+        }}
+        transition={{ type: "spring", stiffness: 220, damping: 24 }}
+        className="fixed top-0 z-40 py-4 flex justify-between items-center backdrop-blur-md"
       >
-        {/* Logo */}
-        <div className="text-2xl font-bold text-dark tracking-tighter cursor-pointer" onClick={() => {
-          if (onViewHome) onViewHome();
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }}>
-          Zacchaeus
-        </div>
+        {/* Logo with Spring Letter Bounce */}
+        <motion.div 
+          whileHover="hover"
+          className="text-2xl font-bold text-dark tracking-tighter cursor-pointer flex select-none" 
+          onClick={() => {
+            if (onViewHome) onViewHome();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+        >
+          {logoLetters.map((char, index) => (
+            <motion.span
+              key={index}
+              variants={letterVariants}
+              transition={{ delay: index * 0.02 }}
+              className="inline-block"
+            >
+              {char}
+            </motion.span>
+          ))}
+        </motion.div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-1 items-center text-sm font-semibold tracking-wider text-slate-700 bg-slate-100/60 p-1 rounded-full border border-slate-200/50 backdrop-blur-sm">
@@ -130,7 +163,7 @@ export default function Header({ onOpenBooking, onViewHome, onViewPortfolio, onV
             )}
           </button>
         </div>
-      </nav>
+      </motion.nav>
 
       {/* Mobile Drawer/Menu */}
       <div 

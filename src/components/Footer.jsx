@@ -28,16 +28,16 @@ export default function Footer({ onOpenBooking, onViewCertificates, onViewContac
   };
 
   return (
-    <footer className="relative bg-footer-gradient pt-32 pb-12 overflow-hidden mt-24">
-      {/* CTA Card (Overlapping) */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl px-4 z-20">
+    <footer className="relative bg-footer-gradient pt-16 pb-12 overflow-hidden mt-24">
+      {/* CTA Card (Centered & Stacked Naturally) */}
+      <div className="relative max-w-5xl mx-auto px-4 z-20 mb-16">
         <div className="bg-white rounded-[3rem] shadow-2xl border border-slate-100 p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
           <div className="absolute inset-0 opacity-5 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiB2aWV3Qm94PSIwIDAgNDAwIDQwMCI+PHBhdGggZD0iTTIwMCAwbDIwMCA0MDBIMHoiIGZpbGw9IiMzQjgyRjYiLz48L3N2Zz4=')] bg-cover pointer-events-none"></div>
           
           <div className="md:w-1/3 z-10">
             <img 
               alt="Praxis AI Model Development" 
-              className="w-full h-auto rounded-3xl object-cover shadow-lg border-4 border-white transform scale-110 -translate-y-8 hover:scale-[1.12] transition-transform duration-300" 
+              className="w-full h-auto rounded-3xl object-cover shadow-lg border-4 border-white transform hover:scale-[1.03] transition-transform duration-300" 
               src="/llama_finetune.jpg"
             />
           </div>
