@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
-export default function BookingModal({ isOpen, onClose }) {
+export default function BookingModal({ onClose }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -10,8 +11,6 @@ export default function BookingModal({ isOpen, onClose }) {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
-
-  if (!isOpen) return null;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,13 +39,22 @@ export default function BookingModal({ isOpen, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop */}
-      <div 
-        className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity"
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
         onClick={onClose}
       />
       
       {/* Modal Container */}
-      <div className="relative w-full max-w-lg bg-white rounded-3xl p-8 shadow-2xl border border-slate-100 transform scale-100 transition-all z-10 animate-fade-in-up">
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.9, y: 20 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.9, y: 20 }}
+        transition={{ type: "spring", stiffness: 300, damping: 25 }}
+        className="relative w-full max-w-lg bg-white rounded-3xl p-8 shadow-2xl border border-slate-100 z-10"
+      >
         {/* Close Button */}
         <button 
           onClick={onClose}
@@ -155,7 +163,9 @@ export default function BookingModal({ isOpen, onClose }) {
                 />
               </div>
 
-              <button 
+              <motion.button 
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 type="submit" 
                 className="w-full bg-primary text-white py-3.5 rounded-full text-sm font-bold hover:bg-blue-800 transition-colors shadow-lg flex items-center justify-center gap-2 mt-2"
               >
@@ -163,11 +173,11 @@ export default function BookingModal({ isOpen, onClose }) {
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
-              </button>
+              </motion.button>
             </form>
           </div>
         )}
-      </div>
+      </motion.div>
     </div>
   );
 }

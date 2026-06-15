@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Header({ onOpenBooking }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -54,21 +55,29 @@ export default function Header({ onOpenBooking }) {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8 text-sm font-semibold tracking-wider text-slate-700">
-          {navItems.map((item) => (
-            <a
-              key={item}
-              href="#"
-              onClick={(e) => handleNavClick(e, item)}
-              className={`transition-colors py-1 border-b-2 transition-all ${
-                activeTab === item 
-                  ? 'text-primary border-primary' 
-                  : 'text-slate-600 border-transparent hover:text-primary'
-              }`}
-            >
-              {item}
-            </a>
-          ))}
+        <div className="hidden md:flex space-x-1 items-center text-sm font-semibold tracking-wider text-slate-700 bg-slate-100/60 p-1 rounded-full border border-slate-200/50 backdrop-blur-sm">
+          {navItems.map((item) => {
+            const isActive = activeTab === item;
+            return (
+              <a
+                key={item}
+                href="#"
+                onClick={(e) => handleNavClick(e, item)}
+                className={`relative px-4 py-1.5 transition-colors duration-300 text-xs rounded-full ${
+                  isActive ? 'text-white' : 'text-slate-600 hover:text-dark'
+                }`}
+              >
+                {isActive && (
+                  <motion.span 
+                    layoutId="activeNavTab"
+                    className="absolute inset-0 bg-primary rounded-full -z-10 shadow-sm"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+                {item}
+              </a>
+            );
+          })}
         </div>
 
         {/* Booking & Hamburger */}

@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 export default function Partners() {
   const logos = [
     "https://lh3.googleusercontent.com/aida-public/AB6AXuDBcfpK1fHeNMzbv6wzvNIpoDlE8YSEJLwxTOz-ZFifoeaQ44x3i9hHOM8QIVomI5ryoLcRKGDOTGpZ0UBWOIiA8ETC9XyBuH9_VeKG8XQorY_dV9Qg9z8Rjz6ili5wuvya8ffBQRfTsRrMQphX6ZN6VTeq6tOzs3DoqVft8ivT1UaOENpReHEOBB3mBWYhwPLjIWt31y2-WfBU3KRhF9e5L0gSLEfrEvdi25-yZ3TIrFiilbOi8wfXwAcqIkfWJ96MjNn-h6V6fGap",
@@ -7,21 +9,37 @@ export default function Partners() {
     "https://lh3.googleusercontent.com/aida-public/AB6AXuD8uXBwxaRYUZOK5zhJKDJHC_teyPTdZSuvcLG2gCrndbiocYyZEwmV0HSjfox6G_iZROJE_t-8FNnYBYEgoZxXVNe6hgds0MxIEwzrzsqBSQkQy-1NQdnSCSepY-XNrxQEo9V0jwJH0pl6smisxYuKHDRw-puh3vYpx-NE3cyHCrc6ajVI2ZhopPyA96_G3Qe9_wmWsnt4KXRH_8kjlkoQ0eusH0dLQEwWPPtl1yetdvGLFmWcfXf_NyNTjzqtkSLLr5iqn9sWXh_T"
   ];
 
+  // Duplicate for smooth seamless loop scrolling
+  const marqueeLogos = [...logos, ...logos, ...logos, ...logos];
+
   return (
-    <section className="py-12 border-t border-b border-slate-100 bg-white">
+    <section className="py-12 border-t border-b border-slate-100 bg-white overflow-hidden select-none">
       <div className="container mx-auto px-4">
         <h3 className="text-center text-sm font-bold text-slate-400 uppercase tracking-widest mb-8">
           Trusted Partners
         </h3>
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
-          {logos.map((logo, index) => (
-            <img 
-              key={index}
-              alt="Partner Logo" 
-              className="h-8 object-contain hover:scale-105 transition-transform duration-200" 
-              src={logo}
-            />
-          ))}
+        <div className="relative w-full overflow-hidden flex">
+          <motion.div 
+            animate={{ x: [0, "-50%"] }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 25,
+                ease: "linear",
+              },
+            }}
+            className="flex gap-16 md:gap-24 w-max pr-16"
+          >
+            {marqueeLogos.map((logo, index) => (
+              <img 
+                key={index}
+                alt="Partner Logo" 
+                className="h-8 object-contain opacity-55 hover:opacity-100 transition-opacity duration-300 hover:scale-110 transition-transform duration-200 grayscale hover:grayscale-0 cursor-pointer" 
+                src={logo}
+              />
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>

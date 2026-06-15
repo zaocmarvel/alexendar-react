@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Books() {
   const sliderRef = useRef(null);
@@ -85,13 +86,20 @@ export default function Books() {
         {books.map((book) => {
           const isFeatured = activeBookId === book.id;
           return (
-            <div 
+            <motion.div 
+              layout
               key={book.id}
               onClick={() => setActiveBookId(book.id)}
-              className={`snap-center shrink-0 cursor-pointer transition-all duration-500 ease-in-out ${
+              whileHover={{ 
+                y: -8, 
+                boxShadow: isFeatured ? "0 35px 60px -15px rgba(29, 26, 143, 0.2)" : "0 20px 25px -5px rgba(0, 0, 0, 0.1)",
+                borderColor: isFeatured ? "rgba(29, 26, 143, 0.3)" : "rgba(0, 0, 0, 0.1)"
+              }}
+              transition={{ type: "spring", stiffness: 300, damping: 22 }}
+              className={`snap-center shrink-0 cursor-pointer ${
                 isFeatured 
-                  ? 'w-80 md:w-96 bg-white rounded-3xl p-6 shadow-2xl border border-blue-100 transform scale-105 z-10' 
-                  : 'w-72 md:w-80 bg-white rounded-3xl p-6 shadow-lg border border-slate-100 flex flex-col hover:-translate-y-2 opacity-80 hover:opacity-100'
+                  ? 'w-80 md:w-96 bg-white rounded-3xl p-6 shadow-2xl border border-blue-100 z-10' 
+                  : 'w-72 md:w-80 bg-white rounded-3xl p-6 shadow-lg border border-slate-100 flex flex-col opacity-80 hover:opacity-100'
               }`}
             >
               <div className="flex justify-between items-center mb-4">
@@ -100,11 +108,10 @@ export default function Books() {
                   {book.rating}
                 </span>
               </div>
-              <img 
+              <motion.img 
+                layout
                 alt={`${book.title} Book Cover`} 
-                className={`w-full h-auto rounded-xl mb-6 object-cover aspect-[3/4] transition-all duration-500 ${
-                  isFeatured ? 'shadow-lg' : 'shadow-md'
-                }`}
+                className={`w-full h-auto rounded-xl mb-6 object-cover aspect-[3/4] shadow-md`}
                 src={book.cover}
               />
               <h3 className={`font-bold text-dark mb-2 transition-all ${
@@ -115,13 +122,15 @@ export default function Books() {
               <p className="text-sm text-slate-500 line-clamp-3">
                 {book.description}
               </p>
-            </div>
+            </motion.div>
           );
         })}
       </div>
 
       <div className="text-center mt-8 relative z-20">
-        <a 
+        <motion.a 
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           className="inline-flex items-center justify-center bg-primary text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-blue-800 transition-colors shadow-md active:scale-95" 
           href="#"
           onClick={(e) => e.preventDefault()}
@@ -130,7 +139,7 @@ export default function Books() {
           <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
           </svg>
-        </a>
+        </motion.a>
       </div>
     </section>
   );

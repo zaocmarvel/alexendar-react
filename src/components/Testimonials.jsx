@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -33,7 +34,13 @@ export default function Testimonials() {
       <div className="container mx-auto px-4 md:px-12 max-w-6xl">
         <div className="flex flex-col md:flex-row gap-16">
           {/* Left Block */}
-          <div className="md:w-1/3">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="md:w-1/3"
+          >
             <h2 className="text-4xl md:text-5xl font-black text-dark leading-none mb-6">
               WHAT<br/>OTHERS SAY
             </h2>
@@ -60,20 +67,23 @@ export default function Testimonials() {
                 </svg>
               </button>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Block (Testimonials listing) */}
           <div className="md:w-2/3 flex flex-col gap-8">
             {testimonials.map((t, idx) => {
               const isActive = idx === activeIndex;
               return (
-                <div 
+                <motion.div 
+                  layout
                   key={t.id}
                   onClick={() => setActiveIndex(idx)}
-                  className={`p-8 rounded-3xl relative transition-all duration-500 ease-in-out cursor-pointer ${
+                  whileHover={{ x: isActive ? 4 : 2 }}
+                  transition={{ type: "spring", stiffness: 350, damping: 25 }}
+                  className={`p-8 rounded-3xl relative cursor-pointer ${
                     isActive 
-                      ? 'bg-blue-100/50 opacity-100 transform translate-x-1 shadow-sm' 
-                      : 'bg-transparent opacity-50 hover:opacity-75 scale-98'
+                      ? 'bg-blue-100/50 opacity-100 shadow-sm border border-blue-200/40' 
+                      : 'bg-transparent opacity-50 hover:opacity-75'
                   }`}
                 >
                   <span className="absolute top-8 left-8 text-xs font-bold text-slate-400">
@@ -114,7 +124,7 @@ export default function Testimonials() {
                       </p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>

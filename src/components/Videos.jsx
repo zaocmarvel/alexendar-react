@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Videos() {
   const [activeVideoIndex, setActiveVideoIndex] = useState(0);
@@ -53,12 +54,20 @@ export default function Videos() {
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4 md:px-12 max-w-7xl">
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-12 gap-4">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-12 gap-4"
+        >
           <div>
             <h2 className="text-4xl md:text-5xl font-black text-dark leading-none mb-2">RECENT VIDEOS</h2>
             <p className="text-sm text-slate-500 font-medium">{videos[activeVideoIndex].title}</p>
           </div>
-          <a 
+          <motion.a 
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors flex items-center bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100" 
             href="#"
             onClick={(e) => e.preventDefault()}
@@ -67,43 +76,63 @@ export default function Videos() {
             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
             </svg>
-          </a>
-        </div>
+          </motion.a>
+        </motion.div>
 
         {/* Video Player Window */}
-        <div className="relative bg-dark rounded-3xl overflow-hidden aspect-video shadow-2xl mb-8 group border-8 border-white">
-          {isPlaying ? (
-            <iframe 
-              width="100%" 
-              height="100%" 
-              src={`https://www.youtube.com/embed/${videos[activeVideoIndex].youtubeId}?autoplay=1`}
-              title={videos[activeVideoIndex].title}
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              allowFullScreen
-              className="absolute inset-0 w-full h-full"
-            />
-          ) : (
-            <>
-              <img 
-                alt="Video Thumbnail" 
-                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" 
-                src={activeVideoIndex === 0 ? mainPlaceholder : videos[activeVideoIndex].thumbnail}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ type: "spring", stiffness: 100, damping: 15 }}
+          className="relative bg-dark rounded-3xl overflow-hidden aspect-video shadow-2xl mb-8 group border-8 border-white"
+        >
+          <AnimatePresence mode="wait">
+            {isPlaying ? (
+              <motion.iframe 
+                key="player"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                width="100%" 
+                height="100%" 
+                src={`https://www.youtube.com/embed/${videos[activeVideoIndex].youtubeId}?autoplay=1`}
+                title={videos[activeVideoIndex].title}
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
               />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <button 
-                  onClick={() => setIsPlaying(true)}
-                  className="w-20 h-20 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-all duration-300 hover:bg-white active:scale-95"
-                  aria-label="Play video"
-                >
-                  <svg className="w-8 h-8 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </button>
-              </div>
-            </>
-          )}
-        </div>
+            ) : (
+              <motion.div 
+                key="thumbnail"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="absolute inset-0 w-full h-full"
+              >
+                <img 
+                  alt="Video Thumbnail" 
+                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" 
+                  src={activeVideoIndex === 0 ? mainPlaceholder : videos[activeVideoIndex].thumbnail}
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <motion.button 
+                    whileHover={{ scale: 1.15 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={() => setIsPlaying(true)}
+                    className="w-20 h-20 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white active:scale-95"
+                    aria-label="Play video"
+                  >
+                    <svg className="w-8 h-8 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </motion.button>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
 
         {/* Video Thumbnails Selection Carousel */}
         <div className="relative px-12 -mt-16 z-10">
@@ -111,7 +140,9 @@ export default function Videos() {
             {videos.map((vid, index) => {
               const isActive = index === activeVideoIndex;
               return (
-                <img 
+                <motion.img 
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
                   key={index}
                   onClick={() => handleThumbnailClick(index)}
                   alt={`Video ${index + 1} Thumbnail`} 
