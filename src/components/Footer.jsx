@@ -36,24 +36,24 @@ export default function Footer({ onOpenBooking }) {
           
           <div className="md:w-1/3 z-10">
             <img 
-              alt="Olabode Zacchaeus Close Up" 
+              alt="Praxis AI Model Development" 
               className="w-full h-auto rounded-3xl object-cover shadow-lg border-4 border-white transform scale-110 -translate-y-8 hover:scale-[1.12] transition-transform duration-300" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIDt9DsW1Evz7puLS9GpDzOl0pnY76KHb9rKS_X5OSbZXV2_KgyrXzPISKELsGpybpijeJFh6-u-Co0D4otIM4qLOvm1udL9ohsIzjOrLiPrIc9IRfcBpojKo62yBp9F1pGSCYWAHijoYqEQEpV5m9X3s3q860p5FDthYxNdgV7HlWbQDPN4uxzOf25NR14p36zivN3czyDbjq06tLU5GAhhkqh27FGwHQdBhq2geqs58MoDMZPauOEmFIeRch1uWjuXPRlZCJlSoK"
+              src="/llama_finetune.jpg"
             />
           </div>
           
           <div className="md:w-2/3 z-10 text-center md:text-left">
             <h2 className="text-4xl md:text-5xl font-black text-dark mb-4 leading-none">
-              INSPIRE YOUR<br/>AUDIENCE
+              SCALE YOUR<br/>ENTERPRISE
             </h2>
             <p className="text-sm text-slate-500 mb-8 max-w-md mx-auto md:mx-0">
-              Bring the edge of <span className="font-bold text-dark">human performance to your event. Zacchaeus's talks</span> offer ground breaking perspectives and practical tools for excellence.
+              Unlock the potential of custom Small Language Models. <span className="font-bold text-dark">Partner with Praxis AI</span> to fine-tune, optimize, and deploy domain-specific models tailored to your business.
             </p>
             <button 
               onClick={onOpenBooking}
               className="inline-flex items-center justify-center bg-primary text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-blue-800 transition-all shadow-md active:scale-95 animate-bounce-subtle"
             >
-              BOOK ZACCHAEUS TO SPEAK 
+              DISCUSS AI INTEGRATION 
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
               </svg>
@@ -72,7 +72,7 @@ export default function Footer({ onOpenBooking }) {
       <div className="container mx-auto px-4 relative z-10 mt-32">
         <div className="max-w-2xl">
           <h3 className="text-xl font-bold text-dark mb-4">
-            Subscribe to the flow research<br/>collective's newsletter
+            Subscribe to the Praxis AI<br/>engineering newsletter
           </h3>
           
           {subscribed ? (
@@ -139,11 +139,11 @@ export default function Footer({ onOpenBooking }) {
 
         <div className="flex flex-wrap justify-between items-center border-t border-blue-200/50 pt-8 gap-4">
           <div className="flex flex-wrap gap-x-8 gap-y-2 text-xs font-semibold text-slate-600 uppercase tracking-wider">
-            <a className="hover:text-primary transition-colors" href="#" onClick={(e) => scrollToSection(e, 'home')}>ABOUT</a>
-            <a className="hover:text-primary transition-colors" href="#" onClick={(e) => scrollToSection(e, 'books')}>WRITING</a>
-            <a className="hover:text-primary transition-colors" href="#" onClick={(e) => scrollToSection(e, 'speaking')}>SPEAKING</a>
-            <a className="hover:text-primary transition-colors" href="#" onClick={(e) => scrollToSection(e, 'videos')}>VIDEO</a>
-            <a className="hover:text-primary transition-colors" href="#" onClick={(e) => scrollToSection(e, 'training')}>TRAIN</a>
+            <a className="hover:text-primary transition-colors" href="#" onClick={(e) => scrollToSection(e, 'home')}>ABOUT ME</a>
+            <a className="hover:text-primary transition-colors" href="#" onClick={(e) => scrollToSection(e, 'books')}>PROJECTS</a>
+            <a className="hover:text-primary transition-colors" href="#" onClick={(e) => scrollToSection(e, 'speaking')}>DEEP LEARNING</a>
+            <a className="hover:text-primary transition-colors" href="#" onClick={(e) => scrollToSection(e, 'videos')}>VIDEOS</a>
+            <a className="hover:text-primary transition-colors" href="#" onClick={(e) => scrollToSection(e, 'training')}>CONSULTING</a>
           </div>
         </div>
 

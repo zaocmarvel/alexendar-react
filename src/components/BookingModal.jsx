@@ -7,7 +7,7 @@ export default function BookingModal({ onClose }) {
     email: '',
     organization: '',
     eventDate: '',
-    eventType: 'Keynote Speaking',
+    eventType: 'AI/ML Consulting',
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
@@ -23,7 +23,7 @@ export default function BookingModal({ onClose }) {
           email: '',
           organization: '',
           eventDate: '',
-          eventType: 'Keynote Speaking',
+          eventType: 'AI/ML Consulting',
           message: '',
         });
         onClose();
@@ -79,9 +79,9 @@ export default function BookingModal({ onClose }) {
           </div>
         ) : (
           <div>
-            <h2 className="text-3xl font-black text-dark mb-2 tracking-tight">BOOKING INQUIRY</h2>
+            <h2 className="text-3xl font-black text-dark mb-2 tracking-tight">GET IN TOUCH</h2>
             <p className="text-slate-500 text-sm mb-6">
-              Bring peak performance flow state concepts to your organization or event.
+              Discuss custom model fine-tuning, system architecture design, or deep learning consulting needs.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -118,7 +118,7 @@ export default function BookingModal({ onClose }) {
                     name="organization"
                     value={formData.organization}
                     onChange={handleChange}
-                    placeholder="Flow Research Collective"
+                    placeholder="Praxis AI"
                     className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
                   />
                 </div>
@@ -143,10 +143,10 @@ export default function BookingModal({ onClose }) {
                     onChange={handleChange}
                     className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none text-slate-700"
                   >
-                    <option>Keynote Speaking</option>
-                    <option>Executive Training</option>
-                    <option>Consulting</option>
-                    <option>Media/Interview</option>
+                    <option>AI/ML Consulting</option>
+                    <option>Model Fine-Tuning</option>
+                    <option>System Architecture</option>
+                    <option>Research Partnership</option>
                   </select>
                 </div>
               </div>

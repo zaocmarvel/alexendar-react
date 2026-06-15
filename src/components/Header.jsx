@@ -18,7 +18,7 @@ export default function Header({ onOpenBooking, onViewHome, onViewPortfolio }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = ['HOME', 'PORTFOLIO', 'SPEAKING', 'WRITING', 'ABOUT ME'];
+  const navItems = ['HOME', 'PORTFOLIO', 'DEEP LEARNING', 'PROJECTS', 'ABOUT ME'];
 
   const handleNavClick = (e, item) => {
     e.preventDefault();
@@ -37,8 +37,8 @@ export default function Header({ onOpenBooking, onViewHome, onViewPortfolio }) {
     if (item === 'HOME') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (item === 'ABOUT ME') targetId = 'about';
-    else if (item === 'WRITING') targetId = 'books';
-    else if (item === 'SPEAKING') targetId = 'speaking';
+    else if (item === 'PROJECTS') targetId = 'books';
+    else if (item === 'DEEP LEARNING') targetId = 'speaking';
     
     if (targetId) {
       setTimeout(() => {

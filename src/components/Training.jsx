@@ -67,12 +67,12 @@ export default function Training({ onOpenBooking }) {
             className="md:w-1/2"
           >
             <h2 className="text-4xl md:text-5xl font-black text-dark leading-none mb-8">
-              FLOW<br/>TRAINING
+              AI / ML<br/>CONSULTING
             </h2>
             <div className="flex items-start gap-4 mb-8">
               <div className="w-16 h-px bg-slate-300 mt-2 shrink-0"></div>
               <p className="text-slate-500 leading-relaxed text-sm">
-                Zacchaeus's research centers on the neurobiology of peak performance — essentially what happens in the brain and body when humans are performing at their very best — with particular attention paid to the state of consciousness known as flow.
+                Zacchaeus's engineering work centers on model optimization and fine-tuning — specifically how to maximize model throughput and decrease compute latency on domain-specific datasets, with a core focus on production-grade Small Language Models.
               </p>
             </div>
             <motion.button 
@@ -81,7 +81,7 @@ export default function Training({ onOpenBooking }) {
               onClick={onOpenBooking}
               className="inline-flex items-center justify-center bg-primary text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-blue-800 transition-all shadow-md active:scale-95"
             >
-              TRAIN FLOW 
+              GET IN TOUCH 
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
               </svg>
@@ -95,9 +95,9 @@ export default function Training({ onOpenBooking }) {
           >
             <motion.img 
               whileHover={{ scale: 1.015 }}
-              alt="Audience at Training" 
+              alt="AI Server Telemetry" 
               className="w-full h-[400px] object-cover rounded-3xl shadow-xl transition-transform duration-300" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeFLYuLs49rdsIyVJdZTiDeDKIK71XMgdedUkBZ5rQW9r1LR9CMAn4zBxD-NBBo6vC-miMVT6RzOjl0bweb7H6DTWG9b7i2i-1IxF9frRPK3aIMUH7h8eQbAoqBMAu-3TwWQrkB3U2txrkIdQ2kYj_jompvBkbd03uz2kgdf0gcArqAp6S1ZDcMcqwIbr5Iad8VfYaqxout0ocitc0ARtzCxo95CY7qowPiad0_D6JbQvGf1jMx_4CZVrOgyLuqpU-N4SwFIs3gQWr"
+              src="/ai_server_telemetry.jpg"
             />
             
             {/* Overlay Card */}
@@ -111,17 +111,17 @@ export default function Training({ onOpenBooking }) {
             >
               <div className="flex gap-4 items-center">
                 <img 
-                  alt="Small Portrait" 
+                  alt="Praxis AI logo" 
                   className="w-12 h-12 rounded-full object-cover shadow-sm" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcyTNWpAXoB5LO4mE1osDZ6Mv21aFRShhjUrgx97XGzZMUaZoykSfQTfhF_nyphDxBKFb8mwCoketl04XDuZ2fbvQKiieGGxAYYx8fe61JIR4oOEwJVZ9X3dAIb_D4MOJgHOjAOfDx70ggnECnBe85DR9GGRRMjcWRQL_6l3R7e8RvuvDUjndKzd6aaspjmRFkYmxGJ9Y-S3q0a3eL_7pMxqAl73X6Deg2dNH1QG-itza0d5VJ2BHy7yJzpAUorpCuXvk4Wh4kEC1x"
+                  src="/llama_finetune.jpg"
                 />
                 <p className="text-xs font-bold text-dark leading-tight">
-                  Zacchaeus's research centers on the neurobiology of peak performance
+                  Scale your business with optimized Small Language Models.
                 </p>
               </div>
               <div className="flex items-center text-xs font-medium text-slate-500 border-t border-slate-100 pt-2">
-                <span className="w-2 h-2 rounded-full bg-blue-400 mr-2"></span>
-                4.8 Rating
+                <span className="w-2 h-2 rounded-full bg-emerald-400 mr-2"></span>
+                Praxis AI Co-Founder
               </div>
             </motion.div>
           </motion.div>
