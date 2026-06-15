@@ -27,6 +27,20 @@ export default function Books({ onViewPortfolio }) {
       rating: "Reinforcement Learning",
       description: "Developed a deep reinforcement learning policy utilizing PPO for precise trajectory path planning of robotic systems.",
       cover: "/ppo_robotics.jpg",
+    },
+    {
+      id: 4,
+      title: "Deep Learning Architectures",
+      rating: "Deep Learning",
+      description: "Designed and trained custom deep learning architectures at scale, achieving optimized performance for enterprise workloads.",
+      cover: "/deep_learning_nodes.jpg",
+    },
+    {
+      id: 5,
+      title: "Enterprise AI Infrastructure",
+      rating: "AI Infrastructure",
+      description: "Optimized model throughput and latency for production-grade Small Language Models (SLMs) on custom enterprise datasets.",
+      cover: "/ai_server_telemetry.jpg",
     }
   ];
 
@@ -42,9 +56,9 @@ export default function Books({ onViewPortfolio }) {
 
     // Cycle the active/featured status for visual feedback
     if (direction === 'left') {
-      setActiveBookId((prev) => (prev > 1 ? prev - 1 : 3));
+      setActiveBookId((prev) => (prev > 1 ? prev - 1 : 5));
     } else {
-      setActiveBookId((prev) => (prev < 3 ? prev + 1 : 1));
+      setActiveBookId((prev) => (prev < 5 ? prev + 1 : 1));
     }
   };
 
@@ -110,7 +124,7 @@ export default function Books({ onViewPortfolio }) {
               <motion.img 
                 layout
                 alt={`${book.title} Project Screenshot`} 
-                className={`w-full h-auto rounded-xl mb-6 object-cover aspect-[3/4] shadow-md`}
+                className="w-full aspect-[16/10] rounded-xl mb-6 object-cover shadow-md"
                 src={book.cover}
               />
               <h3 className={`font-bold text-dark mb-2 transition-all ${

@@ -19,6 +19,18 @@ export default function Portfolio({ onBack }) {
       description: "Developed a deep reinforcement learning policy utilizing PPO for precise trajectory path planning of robotic systems.",
       tags: ["Python", "OpenAI Gym", "PyBullet", "RL"],
       cover: "/ppo_robotics.jpg"
+    },
+    {
+      title: "Deep Learning Architectures",
+      description: "Designed and trained custom deep learning architectures at scale, achieving optimized performance for enterprise workloads.",
+      tags: ["PyTorch", "Model Parallelism", "Neural Networks"],
+      cover: "/deep_learning_nodes.jpg"
+    },
+    {
+      title: "Enterprise AI Infrastructure",
+      description: "Optimized model throughput and latency for production-grade Small Language Models (SLMs) on custom enterprise datasets.",
+      tags: ["CUDA", "TensorRT", "SLMs", "Praxis AI"],
+      cover: "/ai_server_telemetry.jpg"
     }
   ];
 
@@ -89,7 +101,7 @@ export default function Portfolio({ onBack }) {
               <div>
                 <img 
                   alt={project.title} 
-                  className="w-full h-48 object-cover rounded-2xl mb-6 shadow-sm border border-slate-50"
+                  className="w-full aspect-[16/10] object-cover rounded-2xl mb-6 shadow-sm border border-slate-50"
                   src={project.cover}
                 />
                 <h3 className="text-xl font-bold text-dark mb-3">{project.title}</h3>
