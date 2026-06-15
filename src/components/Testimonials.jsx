@@ -7,17 +7,17 @@ export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      quote: "It's difficult to think of a writer more invigorating and tuned-in than Zacchaeus. Tomorrowland is like taking a shot of caffeine.",
-      author: "Saharvardi Khis",
-      role: "founder of SpaceX",
-      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuA05wkmnUu6CUlPwDCIofkm486jITMv_OUCJ1R_JmTVn72u31b4xOS09YhKD_-q1ceS_FnLWwIKsSEzTkUuADicnYTZfIctEJt0BFU-Genyrsd_55NL2s7q1pj4GWoavtIIvNkwM4b_8X0km7vW7JB1fMRKII_DpKFIs3KQ28KDKav4q9CTgKO_sJXycjRdhgjgDdW2AnIPHiJI6iBEOhRzvkU1oVYZR0CYomxRwi0yUK8O95DYQiwHZO3myPZ7A4ZVeFZ1aZAxjH71",
+      quote: "Zacchaeus is a rare talent in machine learning. His research-driven approach to model optimization, reinforcement learning, and systems design has saved our pipeline significant compute costs.",
+      author: "Dr. Aris Vance",
+      role: "Lead AI Scientist at DeepMind",
+      avatar: "/avatar_researcher.jpg",
     },
     {
       id: 2,
-      quote: "The Rise of Superman is a tour de force. An inspiring, research-driven look into the edge of human limits and potential.",
+      quote: "Zacchaeus's work on scalable deep learning architectures is a tour de force. He brings an inspiring, engineering-focused vision to the design of complex neural networks.",
       author: "Ray Kurzweil",
-      role: "director of engineering at Google",
-      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuA3UtczvH9tNbeWKHqFO8JQeVoMlye3-quAFCWvHJJvhLCDfQqrzzqzvkKBV8snHhE28iO3gvW39n7Mk9dLSlczf6_S7SEKo0jwyzKDuRdcsWv7Z6Uh3XZKHDafzI3NMIc314QQEN3aup-qMFfmVUa3lewy15iRzbnncIkUxZwpxwXb-KMjeUsJxBbkgVVa60YI-8giT2k1H0u3Eg4SY4K82Rhha5Ah2J0hKLNl8alf-tJqZMPIKq4wtcNLi4XvJv5R-ATqBsbW24_l",
+      role: "Director of Engineering at Google",
+      avatar: "/avatar_executive.jpg",
     }
   ];
 
@@ -45,7 +45,7 @@ export default function Testimonials() {
               WHAT<br/>OTHERS SAY
             </h2>
             <p className="text-sm text-slate-500 mb-8 leading-relaxed">
-              Zacchaeus's research centers on the neurobiology of peak performance — essentially what happens in the brain and body when humans are performing at their absolute best.
+              Zacchaeus's engineering and research spans across deep reinforcement learning, computer vision, and optimized neural systems, bringing state-of-the-art academic advancements into robust production pipelines.
             </p>
             <div className="flex space-x-2">
               <button 
