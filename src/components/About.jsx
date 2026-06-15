@@ -61,7 +61,7 @@ export default function About({ onOpenBooking, onScrollToBooks }) {
               <span className="text-sm font-bold text-slate-500 tracking-widest uppercase">About Me</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-dark leading-tight mb-6">
-              Olabode Zacchaeus is a New York Times bestselling author <span className="text-slate-400 font-light">and award winning journalist</span>
+              Olabode Zacchaeus is a Machine Learning Engineer <span className="text-slate-400 font-light">and AI researcher</span>
             </h2>
             <button 
               onClick={onScrollToBooks}
